@@ -26,21 +26,21 @@ begin
 #100 a='b0000; b='b0010; cin=0;
 // ADD 7 MORE TESTS TO COMPLETE CONNECTIVITY TESTS
 // for each add your test vectors before the semicolon after the delay
-#100 ;
-#100 ;
-#100 ;
-#100 ;
-#100 ;
-#100 ;
-#100 ;
+#100 a='b0100; b='b0000; cin=0;
+#100 a='b1000; b='b0000; cin=0;
+#100 a='b0000; b='b0100; cin=0;
+#100 a='b0000; b='b1000; cin=0;
+#100 a='b0010; b='b0010; cin=0;
+#100 a='b0100; b='b0100; cin=0;
+#100 a='b1000; b='b1000; cin=0;
 
 // Connectivity tests completed.
  
-// ADD TESTS FOR FINDING MAXIMUM CARRY DELAY HERE
+// ADD TESTS FOR FINDING MAXIMUM CARRY DELAY HERE | tested, delay=8ns
 // 2 test vectors required - one to initialise followed by the 2nd to exercise
 // the critical path
-#100 ;
-#100 ;
+#100 a='b0000; b='b0000; cin=0;
+#100 a='b1111; b='b0001; cin=0;
 
 
 // Please make sure your stimulus is above this line

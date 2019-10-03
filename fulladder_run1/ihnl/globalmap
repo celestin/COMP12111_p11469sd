@@ -1,0 +1,11 @@
+CADENCE IHNL11140
+$model
+XOR2 XOR2
+OR2 OR2
+AND2 AND2
+COMP12111_lib/fulladder/schematic fulladder
+$endmodel
+$net
+$endnet
+$param
+$endparam

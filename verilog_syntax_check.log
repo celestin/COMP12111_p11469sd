@@ -1,0 +1,4 @@
+ncvlog(64): 15.20-s038: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+file: testfixture.template
+	module check.test
+		errors: 0, warnings: 0

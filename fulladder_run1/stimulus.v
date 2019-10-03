@@ -12,10 +12,20 @@ initial
 begin
   #100 a=0; b=0; cin=0;
 // Enter you stimulus below this line
-
-
-
-
+#100
+a=1;
+#100
+b=1; a=0;
+#100
+a=1;
+#100
+a=0; b=0; cin=1;
+#100
+a=1;
+#100
+b=1; a=0;
+#100
+a=1;
 
 
 
