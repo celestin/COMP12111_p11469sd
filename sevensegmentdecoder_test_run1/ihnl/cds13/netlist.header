@@ -1,0 +1,68 @@
+// Library - Board_lib, Cell - BoardV2, View - schematic
+// LAST TIME SAVED: Jul 18 12:20:58 2018
+// NETLIST TIME: Oct 14 17:34:21 2019
+`timescale 1ns / 10ps 
+
+module BoardV2 ( Board_Switch1, Board_Switch2, Clk_1Hz, Clk_1MHz,
+     Clk_1kHz, Clk_8MHz, Clk_10Hz, Clk_100Hz, Key_row1, Key_row2,
+     Key_row3, Key_row4, S6_Button0, S6_Button1, bp_mem_data_write,
+     bp_mem_write_en, breakpoint_adr, mem_addr, mem_dout, mem_wen,
+     proc_clk, proc_reset, Bargraph, Board_led, Buzzer, Digit0, Digit1,
+     Digit2, Digit3, Digit4, Digit5, Display_en, S6_leds,
+     Traffic_lights, bp_detected, bp_mem_data_read, mem_din, proc_cc,
+     proc_din, proc_fetch, proc_halted );
+
+output  Board_Switch1, Board_Switch2, Clk_1Hz, Clk_1MHz, Clk_1kHz,
+     Clk_8MHz, Clk_10Hz, Clk_100Hz, S6_Button0, S6_Button1,
+     bp_mem_data_write, bp_mem_write_en, mem_wen, proc_clk, proc_reset;
+
+input  Board_led, Buzzer, bp_detected, bp_mem_data_read, proc_fetch,
+     proc_halted;
+
+output [7:0]  Key_row2;
+output [11:0]  mem_addr;
+output [15:0]  breakpoint_adr;
+output [7:0]  Key_row1;
+output [7:0]  Key_row4;
+output [7:0]  Key_row3;
+output [15:0]  mem_dout;
+
+input [7:0]  Digit4;
+input [5:0]  Traffic_lights;
+input [7:0]  Bargraph;
+input [7:0]  Digit3;
+input [7:0]  Digit5;
+input [7:0]  Digit0;
+input [7:0]  Digit1;
+input [5:0]  Display_en;
+input [3:0]  S6_leds;
+input [15:0]  mem_din;
+input [7:0]  Digit2;
+input [3:0]  proc_cc;
+input [15:0]  proc_din;
+
+// Buses in the design
+
+wire  [0:7]  net058;
+
+wire  [0:7]  net64;
+
+wire  [0:7]  net060;
+
+wire  [0:7]  net061;
+
+wire  [0:7]  net059;
+
+wire  [5:0]  Seg_En;
+
+wire  [5:0]  TL;
+
+wire  [7:0]  Segs;
+
+
+specify 
+    specparam CDS_LIBNAME  = "Board_lib";
+    specparam CDS_CELLNAME = "BoardV2";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+

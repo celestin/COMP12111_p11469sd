@@ -1,0 +1,31 @@
+count_4 I2 ( net041, net049, net13, net3, net25, net17);
+INV  I25 ( .O(net023), .I(net047));
+INV  I22 ( .O(net022), .I(net046));
+INV  I5 ( .I(net015), .O(net6));
+INV  I12 ( .I(net018), .O(net039));
+INV  I19 ( .I(net017), .O(net077));
+count_10 I11 ( net025[0:3], net024, net029, net25, net021);
+count_10 I10 ( net030[0:3], net029, net019, net25, net021);
+count_10 I9 ( net020[0:3], net019, net13, net25, net021);
+count_10 I17 ( net040[0:3], net0120, CE_10Hz, net25, net051);
+count_10 I16 ( net045[0:3], CE_10Hz, CE_100Hz, net25, net051);
+count_10 I15 ( net050[0:3], CE_100Hz, net024, net25, net051);
+BUFG  I30 ( .O(Clk_1MHz), .I(net015));
+BUFG  I29 ( .O(Clk_10Hz), .I(net047));
+BUFG  I28 ( .O(Clk_100Hz), .I(net046));
+BUFG  I27 ( .O(Clk_1Hz), .I(net017));
+BUFG  I21 ( .I(net25), .O(Clk_8MHz));
+BUFG  I26 ( .O(Clk_1kHz), .I(net018));
+GND  I7 ( .G(net17));
+GND  I14 ( .G(net021));
+GND  I18 ( .G(net051));
+IPAD  I1 ( .IPAD(net24));
+FDE  I24 ( .D(net023), .Q(net047), .CE(CE_10Hz), .C(net25));
+FDE  I23 ( .D(net022), .Q(net046), .CE(CE_100Hz), .C(net25));
+FDE  I4 ( .C(net25), .CE(net13), .Q(net015), .D(net6));
+FDE  I13 ( .C(net25), .CE(net024), .Q(net018), .D(net039));
+FDE  I20 ( .C(net25), .CE(net0120), .Q(net017), .D(net077));
+VCC  I6 ( .P(net3));
+IBUF  I0 ( .I(net24), .O(net25));
+
+endmodule

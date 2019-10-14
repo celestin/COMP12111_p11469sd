@@ -1,7 +1,7 @@
 \o Program:		@(#)$CDS: libManager version 6.1.7 - CAT35 09/11/2017 15:13 (sjfnl050) $
 \o Sub version:		sub-version  s057 
-\o Arguments:		-unmapped -mpssession virtuoso3805 -mpshost e-c07kilf1644.it.manchester.ac.uk 
-\o Working Directory:	e-c07kilf1644.it.manchester.ac.uk:/home/p11469sd/Cadence/COMP12111
+\o Arguments:		-unmapped -mpssession virtuoso5464 -mpshost e-c07kilf1607.it.manchester.ac.uk 
+\o Working Directory:	e-c07kilf1607.it.manchester.ac.uk:/home/p11469sd/Cadence/COMP12111
 \o 64-bit offsets
 \o Qt version: 		4.8.5
 \o changeWorkingDir("/home/p11469sd/Cadence/COMP12111") unnecessary.
@@ -10,27 +10,24 @@
 \o Opening libManager window.
 \a nrSetWindowVisibility(cdsLibManager "show")
 \o MPS service: map window
-\a nrSetCurrentWindow(cdsLibManager)
 \o Library Manager customization server connected.
-\a nrResizeWindow(cdsLibManager list(79 109 602 491))
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrResizeWindow(cdsLibManager list(1077 103 602 491))
+\a nrResizeWindow(cdsLibManager list(988 426 602 491))
+\a nrResizeWindow(cdsLibManager list(1038 399 602 491))
 \a cdsLibManager->libListBox->value = "COMP12111_lib"
 \a cdsLibManager->libLineEdit->value = "COMP12111_lib"
-\a nrResizeWindow(cdsLibManager list(-116 651 602 491))
-\a nrResizeWindow(cdsLibManager list(38 361 602 491))
-\a cdsLibManager->cellListBox->value = "fulladder"
-\a cdsLibManager->cellLineEdit->value = "fulladder"
-\a cdsLibManager->viewListBox->value = "schematic"
-\a cdsLibManager->viewLineEdit->value = "schematic"
-\a cdsLibManager->viewListBox->value = nil
-\a cdsLibManager->viewLineEdit->value = ""
-\a cdsLibManager->viewListBox->value = "schematic"
-\a cdsLibManager->viewLineEdit->value = "schematic"
-\a cdsLibManager->viewListBox->value = nil
-\a cdsLibManager->viewLineEdit->value = ""
-\a cdsLibManager->viewListBox->value = "schematic"
-\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "sevensegmentdecoder"
+\a cdsLibManager->cellLineEdit->value = "sevensegmentdecoder"
+\a nrResizeWindow(cdsLibManager list(1038 399 850 491))
+\a nrResizeWindow(cdsLibManager list(1038 399 669 491))
+\a nrResizeWindow(cdsLibManager list(1038 399 670 491))
+\a cdsLibManager->viewListBox->value = "functional"
+\a cdsLibManager->viewLineEdit->value = "functional"
+\a lmgrLogShowPopup("mainListPopup2" 60 6 2 "functional")
+\a lmgrLogShowPopup("mainListPopup2" 39 9 2 "functional")
+\a cdsLibManager->FileOpenButton->value = t
 \o MPS request: edit design
-\a nrListItemAction(cdsLibManager->gdmXTView 0 0)
 \a cdsLibManager->libListBox->value = nil
 \a cdsLibManager->libLineEdit->value = ""
 \a cdsLibManager->cellListBox->value = nil
@@ -39,48 +36,23 @@
 \a cdsLibManager->cellLineEdit->value = ""
 \a cdsLibManager->libListBox->value = "COMP12111_lib"
 \a cdsLibManager->libLineEdit->value = "COMP12111_lib"
-\a cdsLibManager->cellListBox->value = "fulladder"
-\a cdsLibManager->cellLineEdit->value = "fulladder"
-\a cdsLibManager->viewListBox->value = "schematic"
-\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "sevensegmentdecoder"
+\a cdsLibManager->cellLineEdit->value = "sevensegmentdecoder"
+\a cdsLibManager->viewListBox->value = "functional"
+\a cdsLibManager->viewLineEdit->value = "functional"
 \a cdsLibManager->viewLineEdit->value = ""
 \a cdsLibManager->viewListBox->value = nil
-\a cdsLibManager->viewListBox->value = "schematic"
-\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewListBox->value = "functional"
+\a cdsLibManager->viewLineEdit->value = "functional"
 \a nrSetCurrentWindow(cdsLibManager)
-\a _lmgrCloseIconify("cdsLibManager" 1)
-\a nrSetCurrentWindow(cdsLibManager)
-\a nrSetCurrentWindow(cdsLibManager)
-\a nrSetCurrentWindow(cdsLibManager)
-\a _lmgrCloseIconify("cdsLibManager" 1)
-\a nrSetCurrentWindow(cdsLibManager)
-\a _lmgrCloseIconify("cdsLibManager" 1)
-\a nrSetCurrentWindow(cdsLibManager)
-\a nrSetCurrentWindow(cdsLibManager)
-\a nrSetCurrentWindow(cdsLibManager)
-\a nrResizeWindow(cdsLibManager list(942 152 602 491))
-\a nrSetCurrentWindow(cdsLibManager)
-\a nrSetCurrentWindow(cdsLibManager)
-\a nrSetCurrentWindow(cdsLibManager)
-\a nrSetCurrentWindow(cdsLibManager)
-\a nrSetCurrentWindow(cdsLibManager)
-\a nrSetCurrentWindow(cdsLibManager)
-\a nrSetCurrentWindow(cdsLibManager)
-\a nrSetCurrentWindow(cdsLibManager)
-\a nrSetCurrentWindow(cdsLibManager)
-\a nrResizeWindow(cdsLibManager list(1086 111 602 491))
-\a nrSetCurrentWindow(cdsLibManager)
-\a nrSetCurrentWindow(cdsLibManager)
-\a nrSetCurrentWindow(cdsLibManager)
-\a cdsLibManager->cellListBox->value = "adder_4bit"
-\a cdsLibManager->cellLineEdit->value = "adder_4bit"
-\a cdsLibManager->viewLineEdit->value = ""
-\a cdsLibManager->viewListBox->value = nil
-\a cdsLibManager->viewListBox->value = "schematic"
-\a cdsLibManager->viewLineEdit->value = "schematic"
-\a lmgrLogShowPopup("mainListPopup2" 53 10 2 "schematic")
+\a lmgrLogShowPopup("mainListPopup2" 51 3 2 "functional")
 \a cdsLibManager->FileOpenButton->value = t
 \o MPS request: edit design
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrSetCurrentWindow(cdsLibManager)
+\a _lmgrCloseIconify("cdsLibManager" 1)
+\a nrSetCurrentWindow(cdsLibManager)
+\a _lmgrCloseIconify("cdsLibManager" 1)
 \a nrSetCurrentWindow(cdsLibManager)
 \a cdsLibManager->fileExitButton->value = t
 \o libManager is exiting.

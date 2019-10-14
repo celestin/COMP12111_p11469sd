@@ -1,0 +1,39 @@
+CADENCE IHNL11140
+$model
+Board_lib/Keys/schematic Keys
+XOR2 XOR2
+FDE FDE
+Board_lib/Buzzer/schematic Buzzer
+COMP12111_lib/sevensegmentdecoder_test/schematic sevensegmentdecoder_test
+OPAD OPAD
+Board_lib/Board_SW2/schematic Board_SW2
+Board_lib/Bargraph/schematic Bargraph
+IOBUF IOBUF
+INV INV
+IPAD IPAD
+BUFG BUFG
+Board_lib/Keyboard/schematic Keyboard
+AND3 AND3
+Board_lib/count_10/schematic count_10
+Board_lib/Clocks/schematic Clocks
+AND2B1 AND2B1
+VCC VCC
+OBUF OBUF
+Board_lib/Seven_segments/schematic Seven_segments
+IBUF IBUF
+OR2 OR2
+AND2 AND2
+Board_lib/count_4/schematic count_4
+Board_lib/depp/schematic depp
+Board_lib/Board_led/schematic Board_led
+IOPAD IOPAD
+Board_lib/Traffic_lights/schematic Traffic_lights
+FDCE FDCE
+Board_lib/BoardV2/schematic BoardV2
+GND GND
+Board_lib/Board_SW1/schematic Board_SW1
+$endmodel
+$net
+$endnet
+$param
+$endparam

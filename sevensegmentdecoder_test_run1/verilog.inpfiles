@@ -1,0 +1,58 @@
+// Verilog HDL and netlist files of
+// "COMP12111_lib sevensegmentdecoder_test schematic"
+
+// HDL models
+
+// HDL file - COMP12111_lib, sevensegmentdecoder, functional.
+/home/p11469sd/Cadence/COMP12111/COMP12111_lib/sevensegmentdecoder/functional/verilog.v
+
+// HDL file - Board_lib, ackieV2, functional.
+/home/p11469sd/Cadence/COMP12111/Board_lib/ackieV2/functional/verilog.v
+
+// HDL file - Board_lib, emulated_uart, functional.
+/home/p11469sd/Cadence/COMP12111/Board_lib/emulated_uart/functional/verilog.v
+
+// HDL file - Board_lib, display_scan, functional.
+/home/p11469sd/Cadence/COMP12111/Board_lib/display_scan/functional/verilog.v
+
+// HDL file - Board_lib, key_scan, functional.
+/home/p11469sd/Cadence/COMP12111/Board_lib/key_scan/functional/verilog.v
+
+
+// End HDL models
+
+// Netlisted models
+
+// netlist file - Board_lib, Keys, schematic.
+ihnl/cds0/netlist
+// netlist file - Board_lib, Keyboard, schematic.
+ihnl/cds1/netlist
+// netlist file - Board_lib, Board_SW1, schematic.
+ihnl/cds2/netlist
+// netlist file - Board_lib, Board_SW2, schematic.
+ihnl/cds3/netlist
+// netlist file - Board_lib, Bargraph, schematic.
+ihnl/cds4/netlist
+// netlist file - Board_lib, Seven_segments, schematic.
+ihnl/cds5/netlist
+// netlist file - Board_lib, Board_led, schematic.
+ihnl/cds6/netlist
+// netlist file - Board_lib, Traffic_lights, schematic.
+ihnl/cds7/netlist
+// netlist file - Board_lib, Buzzer, schematic.
+ihnl/cds8/netlist
+// netlist file - Board_lib, depp, schematic.
+ihnl/cds9/netlist
+// netlist file - Board_lib, count_4, schematic.
+ihnl/cds10/netlist
+// netlist file - Board_lib, count_10, schematic.
+ihnl/cds11/netlist
+// netlist file - Board_lib, Clocks, schematic.
+ihnl/cds12/netlist
+// netlist file - Board_lib, BoardV2, schematic.
+ihnl/cds13/netlist
+// netlist file - COMP12111_lib, sevensegmentdecoder_test, schematic.
+ihnl/cds14/netlist
+
+
+// End HDL models

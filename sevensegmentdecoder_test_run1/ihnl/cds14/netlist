@@ -1,0 +1,60 @@
+// Library - COMP12111_lib, Cell - sevensegmentdecoder_test, View -
+//schematic
+// LAST TIME SAVED: Oct 14 17:56:31 2019
+// NETLIST TIME: Oct 14 17:56:40 2019
+`timescale 1ns / 10ps 
+
+module sevensegmentdecoder_test (  );
+
+// Buses in the design
+
+wire  [7:0]  Key_row1;
+
+wire  [0:7]  net30;
+
+wire  [0:7]  net030;
+
+wire  [0:15]  net8;
+
+wire  [0:7]  net032;
+
+wire  [0:15]  net6;
+
+wire  [0:7]  net15;
+
+wire  [0:11]  net7;
+
+
+specify 
+    specparam CDS_LIBNAME  = "COMP12111_lib";
+    specparam CDS_CELLNAME = "sevensegmentdecoder_test";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+BoardV2 I13 ( net34, net35, net24, net25, net26, net27, net32, net33,
+     Key_row1[7:0], net30[0:7], net030[0:7], net032[0:7], net36, net37,
+     net5, net4, net6[0:15], net7[0:11], net8[0:15], net9, net10,
+     net11, {net05, net05, net05, net05, net05, net05, net05, net05},
+     net22, net12, net15[0:7], {net016, net016, net016, net016, net016,
+     net016, net016, net016}, {net016, net016, net016, net016, net016,
+     net016, net016, net016}, {net016, net016, net016, net016, net016,
+     net016, net016, net016}, {net016, net016, net016, net016, net016,
+     net016, net016, net016}, {net016, net016, net016, net016, net016,
+     net016, net016, net016}, {net039, net039, net039, net039, net039,
+     net039}, {net014, net014, net014, net014}, {net04, net04, net04,
+     net04, net04, net04}, net3, net3, {net3, net3, net3, net3, net3,
+     net3, net3, net3, net3, net3, net3, net3, net3, net3, net3, net3},
+     {net3, net3, net3, net3}, {net3, net3, net3, net3, net3, net3,
+     net3, net3, net3, net3, net3, net3, net3, net3, net3, net3}, net3,
+     net3);
+GND  I34 ( .G(net016));
+GND  I30 ( .G(net04));
+GND  I29 ( .G(net05));
+GND  I19 ( .G(net3));
+GND  I24 ( .G(net12));
+GND  I23 ( .G(net22));
+GND  I20 ( .G(net014));
+sevensegmentdecoder I32 ( Key_row1[3:0], net15[0:7]);
+VCC  I35 ( .P(net039));
+
+endmodule

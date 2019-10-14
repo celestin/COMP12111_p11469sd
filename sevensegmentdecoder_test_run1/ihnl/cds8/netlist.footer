@@ -1,0 +1,4 @@
+OPAD  I1 ( .OPAD(net3));
+OBUF  I0 ( .O(net3), .I(Buzzer));
+
+endmodule

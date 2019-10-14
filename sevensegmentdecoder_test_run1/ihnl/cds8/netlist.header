@@ -1,0 +1,16 @@
+// Library - Board_lib, Cell - Buzzer, View - schematic
+// LAST TIME SAVED: Jul 18 12:21:23 2018
+// NETLIST TIME: Oct 14 17:34:21 2019
+`timescale 1ns / 10ps 
+
+module Buzzer ( Buzzer );
+
+input  Buzzer;
+
+
+specify 
+    specparam CDS_LIBNAME  = "Board_lib";
+    specparam CDS_CELLNAME = "Buzzer";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
