@@ -1,0 +1,8 @@
+CADENCE IHNL11140
+$model
+COMP12111_lib/32bitadder/functional COMP12111_lib_32bitadder_functional
+$endmodel
+$net
+$endnet
+$param
+$endparam
