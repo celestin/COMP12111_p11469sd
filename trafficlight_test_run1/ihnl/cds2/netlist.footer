@@ -1,0 +1,4 @@
+IPAD  I0 ( .IPAD(net3));
+IBUF  I1 ( .O(Board_Switch1), .I(net3));
+
+endmodule

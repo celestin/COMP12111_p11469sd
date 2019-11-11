@@ -1,0 +1,20 @@
+// Library - Board_lib, Cell - Board_led, View - schematic
+// LAST TIME SAVED: Jul 18 12:21:16 2018
+// NETLIST TIME: Nov 11 16:53:12 2019
+`timescale 1ns / 10ps 
+
+module Board_led ( Board_led );
+
+input  Board_led;
+
+
+specify 
+    specparam CDS_LIBNAME  = "Board_lib";
+    specparam CDS_CELLNAME = "Board_led";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+OPAD  I0 ( .OPAD(net3));
+OBUF  I1 ( .O(net3), .I(Board_led));
+
+endmodule

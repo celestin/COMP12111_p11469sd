@@ -1,0 +1,21 @@
+IOPAD  I22 ( .IOPAD(dbus[7]));
+IOPAD  I21 ( .IOPAD(dbus[6]));
+IOPAD  I20 ( .IOPAD(dbus[5]));
+IOPAD  I19 ( .IOPAD(dbus[4]));
+IOPAD  I18 ( .IOPAD(dbus[3]));
+IOPAD  I17 ( .IOPAD(dbus[2]));
+IOPAD  I16 ( .IOPAD(dbus[1]));
+IOPAD  I15 ( .IOPAD(dbus[0]));
+INV  I37 ( .O(wr), .I(DEPP_WRITE));
+OPAD  I13 ( .OPAD(net28));
+OBUF  I30 ( .O(net28), .I(DEPP_WAIT));
+IBUF  I40 ( .O(DEPP_ASTB), .I(net19));
+IBUF  I41 ( .O(DEPP_DSTB), .I(net18));
+IBUF  I42 ( .O(DEPP_WRITE), .I(net17));
+IPAD  I49 ( .IPAD(net17));
+IPAD  I48 ( .IPAD(net18));
+IPAD  I47 ( .IPAD(net19));
+IOBUF  I14[7:0] ( .O(data_from_ucontroller[7:0]), .IO(dbus[7:0]),
+     .I(data_to_ucontroller[7:0]), .T(wr));
+
+endmodule

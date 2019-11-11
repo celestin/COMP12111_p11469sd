@@ -1,0 +1,19 @@
+// Library - Board_lib, Cell - Seven_segments, View - schematic
+// LAST TIME SAVED: Jul 18 12:21:56 2018
+// NETLIST TIME: Nov 11 16:53:12 2019
+`timescale 1ns / 10ps 
+
+module Seven_segments ( DP, En[0], En[1], En[2], En[3], En[4], En[5],
+     Seg_A, Seg_B, Seg_C, Seg_D, Seg_E, Seg_F, Seg_G );
+
+input  DP, Seg_A, Seg_B, Seg_C, Seg_D, Seg_E, Seg_F, Seg_G;
+
+input [0:5]  En;
+
+
+specify 
+    specparam CDS_LIBNAME  = "Board_lib";
+    specparam CDS_CELLNAME = "Seven_segments";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+

@@ -1,0 +1,4 @@
+OPAD  I0 ( .OPAD(net3));
+OBUF  I1 ( .O(net3), .I(Board_led));
+
+endmodule

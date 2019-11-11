@@ -1,0 +1,31 @@
+// Library - Board_lib, Cell - Clocks, View - schematic
+// LAST TIME SAVED: Jul 18 12:21:31 2018
+// NETLIST TIME: Nov 11 16:53:12 2019
+`timescale 1ns / 10ps 
+
+module Clocks ( Clk_1Hz, Clk_1MHz, Clk_1kHz, Clk_8MHz, Clk_10Hz,
+     Clk_100Hz );
+
+output  Clk_1Hz, Clk_1MHz, Clk_1kHz, Clk_8MHz, Clk_10Hz, Clk_100Hz;
+
+// Buses in the design
+
+wire  [0:3]  net020;
+
+wire  [0:3]  net025;
+
+wire  [0:3]  net030;
+
+wire  [0:3]  net040;
+
+wire  [0:3]  net050;
+
+wire  [0:3]  net045;
+
+
+specify 
+    specparam CDS_LIBNAME  = "Board_lib";
+    specparam CDS_CELLNAME = "Clocks";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+

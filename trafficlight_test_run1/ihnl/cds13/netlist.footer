@@ -1,0 +1,44 @@
+Keyboard I2 ( Key_row1[7:0], Key_row2[7:0], Key_row3[7:0],
+     Key_row4[7:0], Clk_1kHz);
+display_scan I11 ( Clk_1kHz, Display_en[5:0], Digit5[7:0], Digit4[7:0],
+     Digit3[7:0], Digit2[7:0], Digit1[7:0], Digit0[7:0], Seg_En[5:0],
+     Segs[7:0]);
+Board_SW1 I16 ( net62);
+IBUF  I26 ( .O(S6_Button1), .I(net59));
+IBUF  I25 ( .O(S6_Button0), .I(net58));
+Board_SW2 I17 ( net63);
+Bargraph I0 ( net64[0:7]);
+Seven_segments I12 ( Segs[7], Seg_En[0], Seg_En[1], Seg_En[2],
+     Seg_En[3], Seg_En[4], Seg_En[5], Segs[0], Segs[1], Segs[2],
+     Segs[3], Segs[4], Segs[5], Segs[6]);
+Board_led I13 ( Board_led);
+Traffic_lights I5 ( TL[4], TL[3], TL[5], TL[1], TL[0], TL[2]);
+Buzzer I14 ( Buzzer);
+OBUF  I34 ( .O(net57), .I(S6_leds[3]));
+OBUF  I33 ( .O(net56), .I(S6_leds[2]));
+OBUF  I32 ( .O(net55), .I(S6_leds[1]));
+OBUF  I31 ( .O(net54), .I(S6_leds[0]));
+emulated_uart I3 ( Clk_8MHz, net059[0:7], net058[0:7], net047, net046,
+     net045, net048, net061[0:7], net060[0:7], net039, net035, net036,
+     net040, net038, net042);
+OPAD  I30 ( .OPAD(net57));
+OPAD  I29 ( .OPAD(net56));
+OPAD  I28 ( .OPAD(net55));
+OPAD  I27 ( .OPAD(net54));
+ackieV2 I4 ( Clk_8MHz, net060[0:7], net061[0:7], net039, net035,
+     net036, net040, net038, net042, mem_wen, mem_addr[11:0],
+     mem_dout[15:0], mem_din[15:0], proc_din[15:0], net063, proc_clk,
+     proc_fetch, proc_cc[3:0], proc_reset, proc_halted,
+     bp_mem_write_en, breakpoint_adr[15:0], bp_mem_data_write,
+     bp_mem_data_read, bp_detected);
+depp I1 ( net047, net046, net045, net059[0:7], net048, net058[0:7]);
+INV  I35[5:0] ( .O(TL[5:0]), .I(Traffic_lights[5:0]));
+INV  I20 ( .O(Board_Switch2), .I(net63));
+INV  I19 ( .O(Board_Switch1), .I(net62));
+INV  I9[7:0] ( .O(net64[0:7]), .I(Bargraph[7:0]));
+IPAD  I24 ( .IPAD(net59));
+IPAD  I23 ( .IPAD(net58));
+Clocks I37 ( Clk_1Hz, Clk_1MHz, Clk_1kHz, Clk_8MHz, Clk_10Hz,
+     Clk_100Hz);
+
+endmodule

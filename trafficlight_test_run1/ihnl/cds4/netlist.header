@@ -1,0 +1,17 @@
+// Library - Board_lib, Cell - Bargraph, View - schematic
+// LAST TIME SAVED: Jul 18 12:19:31 2018
+// NETLIST TIME: Nov 11 16:53:12 2019
+`timescale 1ns / 10ps 
+
+module Bargraph ( BG );
+
+
+input [7:0]  BG;
+
+
+specify 
+    specparam CDS_LIBNAME  = "Board_lib";
+    specparam CDS_CELLNAME = "Bargraph";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+

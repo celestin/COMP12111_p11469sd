@@ -1,0 +1,25 @@
+// Library - Board_lib, Cell - count_4, View - schematic
+// LAST TIME SAVED: Jul 18 12:22:22 2018
+// NETLIST TIME: Nov 11 16:53:12 2019
+`timescale 1ns / 10ps 
+
+module count_4 ( D0, D1, TC, CE, Clk, Clr );
+
+output  D0, D1, TC;
+
+input  CE, Clk, Clr;
+
+
+specify 
+    specparam CDS_LIBNAME  = "Board_lib";
+    specparam CDS_CELLNAME = "count_4";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+INV  I10 ( .O(net13), .I(D0));
+AND3  I6 ( .I2(D1), .I0(CE), .I1(D0), .O(TC));
+FDCE  I8 ( .C(Clk), .CE(CE), .CLR(Clr), .Q(D1), .D(net10));
+FDCE  I9 ( .C(Clk), .CE(CE), .CLR(Clr), .Q(D0), .D(net13));
+XOR2  I4 ( .I0(D1), .I1(D0), .O(net10));
+
+endmodule

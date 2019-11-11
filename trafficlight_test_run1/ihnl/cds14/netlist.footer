@@ -1,0 +1,20 @@
+BoardV2 I13 ( net34, net35, clock, net25, net26, net27, net32, net33,
+     Key_row1[7:0], net30[0:7], net28[0:7], net31[0:7], net36, net37,
+     net5, net4, net6[0:15], net7[0:11], net8[0:15], net9, net10,
+     net11, {net12, net12, net12, net12, net12, net12, net12, net12},
+     net12, net12, {net12, net12, net12, net12, net12, net12, net12,
+     net12}, {net12, net12, net12, net12, net12, net12, net12, net12},
+     {net12, net12, net12, net12, net12, net12, net12, net12}, {net12,
+     net12, net12, net12, net12, net12, net12, net12}, {net12, net12,
+     net12, net12, net12, net12, net12, net12}, {net12, net12, net12,
+     net12, net12, net12, net12, net12}, {net12, net12, net12, net12,
+     net12, net12}, {net12, net12, net12, net12}, net13[0:5], net3,
+     net3, {net3, net3, net3, net3, net3, net3, net3, net3, net3, net3,
+     net3, net3, net3, net3, net3, net3}, {net3, net3, net3, net3},
+     {net3, net3, net3, net3, net3, net3, net3, net3, net3, net3, net3,
+     net3, net3, net3, net3, net3}, net3, net3);
+GND  I19 ( .G(net3));
+GND  I21 ( .G(net12));
+trafficlight I20 ( net13[0:5], clock, Key_row1[1], Key_row1[0]);
+
+endmodule
