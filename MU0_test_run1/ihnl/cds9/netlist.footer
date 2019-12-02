@@ -1,0 +1,12 @@
+mux_3_1 I9[15:0] ( regC[15:0], net028[0:15], net027[0:15], flags[15:0],
+     srcC[1:0]);
+MU0_control I0 ( net26, Halted, net25, net34[0:1], net24, Rd, Wr,
+     net28, net27, net29, fetch, Clk, net35[0:3], cc[1], Reset, cc[0]);
+MU0_datapath I1 ( net028[0:15], Addr[11:0], Dout[15:0], net35[0:3],
+     cc[1], net027[0:15], cc[0], net26, Clk, Din[15:0], net25,
+     net34[0:1], net24, Reset, net28, net27, net29);
+GND  I6[15:2] ( .G(flags[15:2]));
+BUF  I8 ( .O(flags[0]), .I(cc[0]));
+BUF  I7 ( .O(flags[1]), .I(cc[1]));
+
+endmodule

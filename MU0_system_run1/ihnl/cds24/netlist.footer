@@ -1,0 +1,30 @@
+MU0 I58 ( proc_addr[11:0], net028[0:15], proc_halted, net082, writeEn0,
+     proc_cc[1:0], proc_fetch, proc_din[15:0], proc_clk, net027[0:15],
+     proc_reset, mem_addr[1:0]);
+GND  I26[1:0] ( .G(proc_cc[3:2]));
+sevensegmentdecoder I32 ( net044[0:3], net036[0:7]);
+sevensegmentdecoder I31 ( net045[0:3], net035[0:7]);
+sevensegmentdecoder I29 ( net047[0:3], net033[0:7]);
+sevensegmentdecoder I30 ( net046[0:3], net034[0:7]);
+sevensegmentdecoder I27 ( net049[0:3], net025[0:7]);
+sevensegmentdecoder I28 ( net048[0:3], net030[0:7]);
+memory_mu0 I21 ( clk, proc_addr[11:0], net028[0:15], net027[0:15],
+     writeEn0, mem_addr[11:0], mem_dout[15:0], mem_din[15:0], mem_wen,
+     traffic_lights[5:0], bargraph[7:0], buzzer_pulses, board_led,
+     net050[0:5], net049[0:3], net048[0:3], net047[0:3], net046[0:3],
+     net045[0:3], net044[0:3], s6_leds[3:0], key_row4[7:0],
+     key_row3[7:0], key_row2[7:0], key_row1[7:0], board_switch2,
+     board_switch1, s6_button1, s6_button0, bp_mem_write_en,
+     breakpoint_adr[15:0], bp_mem_data_write, bp_mem_data_read,
+     bp_detected);
+BoardV2 I0 ( board_switch1, board_switch2, net29, net041, net31, clk,
+     net36, net37, key_row1[7:0], key_row2[7:0], key_row3[7:0],
+     key_row4[7:0], s6_button0, s6_button1, bp_mem_data_write,
+     bp_mem_write_en, breakpoint_adr[15:0], mem_addr[11:0],
+     mem_dout[15:0], mem_wen, proc_clk, proc_reset, bargraph[7:0],
+     board_led, buzzer_pulses, net036[0:7], net035[0:7], net034[0:7],
+     net033[0:7], net030[0:7], net025[0:7], net050[0:5], s6_leds[3:0],
+     traffic_lights[5:0], bp_detected, bp_mem_data_read, mem_din[15:0],
+     proc_cc[3:0], proc_din[15:0], proc_fetch, proc_halted);
+
+endmodule

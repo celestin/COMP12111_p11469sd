@@ -1,0 +1,87 @@
+// Verilog HDL and netlist files of
+// "MU0_lib MU0_system schematic"
+
+// HDL models
+
+// HDL file - Board_lib, ackieV2, functional.
+/home/p11469sd/Cadence/COMP12111/Board_lib/ackieV2/functional/verilog.v
+
+// HDL file - Board_lib, emulated_uart, functional.
+/home/p11469sd/Cadence/COMP12111/Board_lib/emulated_uart/functional/verilog.v
+
+// HDL file - Board_lib, display_scan, functional.
+/home/p11469sd/Cadence/COMP12111/Board_lib/display_scan/functional/verilog.v
+
+// HDL file - Board_lib, key_scan, functional.
+/home/p11469sd/Cadence/COMP12111/Board_lib/key_scan/functional/verilog.v
+
+// HDL file - MU0_lib, memory_mu0, functional.
+/home/p11469sd/Cadence/COMP12111/MU0_lib/memory_mu0/functional/verilog.v
+
+// HDL file - COMP12111_lib, sevensegmentdecoder, functional.
+/home/p11469sd/Cadence/COMP12111/COMP12111_lib/sevensegmentdecoder/functional/verilog.v
+
+// HDL file - MU0_lib, mux_2to1_16bit, functional.
+/home/p11469sd/Cadence/COMP12111/MU0_lib/mux_2to1_16bit/functional/verilog.v
+
+// HDL file - MU0_lib, mux_2to1_12bit, functional.
+/home/p11469sd/Cadence/COMP12111/MU0_lib/mux_2to1_12bit/functional/verilog.v
+
+
+// End HDL models
+
+// Netlisted models
+
+// netlist file - MU0_lib, mux_3_1, schematic.
+ihnl/cds0/netlist
+// netlist file - MU0_lib, decoder_3_8, schematic.
+ihnl/cds1/netlist
+// netlist file - MU0_lib, MU0_control, schematic.
+ihnl/cds2/netlist
+// netlist file - COMP12111_lib, fulladder, schematic.
+ihnl/cds3/netlist
+// netlist file - COMP12111_lib, adder_4bit, schematic.
+ihnl/cds4/netlist
+// netlist file - COMP12111_lib, adder_16bit, schematic.
+ihnl/cds5/netlist
+// netlist file - MU0_lib, MU0_ALU, schematic.
+ihnl/cds6/netlist
+// netlist file - MU0_lib, MU0_conditions, schematic.
+ihnl/cds7/netlist
+// netlist file - MU0_lib, MU0_datapath, schematic.
+ihnl/cds8/netlist
+// netlist file - MU0_lib, MU0, schematic.
+ihnl/cds9/netlist
+// netlist file - Board_lib, Keys, schematic.
+ihnl/cds10/netlist
+// netlist file - Board_lib, Keyboard, schematic.
+ihnl/cds11/netlist
+// netlist file - Board_lib, Board_SW1, schematic.
+ihnl/cds12/netlist
+// netlist file - Board_lib, Board_SW2, schematic.
+ihnl/cds13/netlist
+// netlist file - Board_lib, Bargraph, schematic.
+ihnl/cds14/netlist
+// netlist file - Board_lib, Seven_segments, schematic.
+ihnl/cds15/netlist
+// netlist file - Board_lib, Board_led, schematic.
+ihnl/cds16/netlist
+// netlist file - Board_lib, Traffic_lights, schematic.
+ihnl/cds17/netlist
+// netlist file - Board_lib, Buzzer, schematic.
+ihnl/cds18/netlist
+// netlist file - Board_lib, depp, schematic.
+ihnl/cds19/netlist
+// netlist file - Board_lib, count_4, schematic.
+ihnl/cds20/netlist
+// netlist file - Board_lib, count_10, schematic.
+ihnl/cds21/netlist
+// netlist file - Board_lib, Clocks, schematic.
+ihnl/cds22/netlist
+// netlist file - Board_lib, BoardV2, schematic.
+ihnl/cds23/netlist
+// netlist file - MU0_lib, MU0_system, schematic.
+ihnl/cds24/netlist
+
+
+// End HDL models

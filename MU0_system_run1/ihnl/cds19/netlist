@@ -1,0 +1,48 @@
+// Library - Board_lib, Cell - depp, View - schematic
+// LAST TIME SAVED: Jul 18 12:22:35 2018
+// NETLIST TIME: Nov 25 16:00:57 2019
+`timescale 1ns / 10ps 
+
+module depp ( DEPP_ASTB, DEPP_DSTB, DEPP_WRITE, data_from_ucontroller,
+     DEPP_WAIT, data_to_ucontroller );
+
+output  DEPP_ASTB, DEPP_DSTB, DEPP_WRITE;
+
+input  DEPP_WAIT;
+
+output [7:0]  data_from_ucontroller;
+
+input [7:0]  data_to_ucontroller;
+
+// Buses in the design
+
+wire  [7:0]  dbus;
+
+
+specify 
+    specparam CDS_LIBNAME  = "Board_lib";
+    specparam CDS_CELLNAME = "depp";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+IOPAD  I22 ( .IOPAD(dbus[7]));
+IOPAD  I21 ( .IOPAD(dbus[6]));
+IOPAD  I20 ( .IOPAD(dbus[5]));
+IOPAD  I19 ( .IOPAD(dbus[4]));
+IOPAD  I18 ( .IOPAD(dbus[3]));
+IOPAD  I17 ( .IOPAD(dbus[2]));
+IOPAD  I16 ( .IOPAD(dbus[1]));
+IOPAD  I15 ( .IOPAD(dbus[0]));
+INV  I37 ( .O(wr), .I(DEPP_WRITE));
+OPAD  I13 ( .OPAD(net28));
+OBUF  I30 ( .O(net28), .I(DEPP_WAIT));
+IBUF  I40 ( .O(DEPP_ASTB), .I(net19));
+IBUF  I41 ( .O(DEPP_DSTB), .I(net18));
+IBUF  I42 ( .O(DEPP_WRITE), .I(net17));
+IPAD  I49 ( .IPAD(net17));
+IPAD  I48 ( .IPAD(net18));
+IPAD  I47 ( .IPAD(net19));
+IOBUF  I14[7:0] ( .O(data_from_ucontroller[7:0]), .IO(dbus[7:0]),
+     .I(data_to_ucontroller[7:0]), .T(wr));
+
+endmodule

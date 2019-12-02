@@ -1,0 +1,13 @@
+CADENCE IHNL111411
+
+MU0_lib mux_3_1 schematic cds0
+MU0_lib decoder_3_8 schematic cds1
+MU0_lib MU0_control schematic cds2
+COMP12111_lib fulladder schematic cds3
+COMP12111_lib adder_4bit schematic cds4
+COMP12111_lib adder_16bit schematic cds5
+MU0_lib MU0_ALU schematic cds6
+MU0_lib MU0_conditions schematic cds7
+MU0_lib MU0_datapath schematic cds8
+MU0_lib MU0 schematic cds9
+MU0_lib MU0_test schematic cds10

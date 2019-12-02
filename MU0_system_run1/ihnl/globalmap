@@ -1,0 +1,61 @@
+CADENCE IHNL11140
+$model
+OR3 OR3
+Board_lib/Keys/schematic Keys
+XOR2 XOR2
+MU0_lib/MU0/schematic MU0
+FDE FDE
+AND4B1 AND4B1
+AND3B2 AND3B2
+MU0_lib/MU0_control/schematic MU0_control
+Board_lib/Buzzer/schematic Buzzer
+COMP12111_lib/adder_16bit/schematic adder_16bit
+BUF BUF
+MU0_lib/MU0_datapath/schematic MU0_datapath
+OPAD OPAD
+Board_lib/Board_SW2/schematic Board_SW2
+NOR4 NOR4
+OR2B1 OR2B1
+Board_lib/Bargraph/schematic Bargraph
+AND4 AND4
+IOBUF IOBUF
+MU0_lib/MU0_system/schematic MU0_system
+INV INV
+BUFG BUFG
+IPAD IPAD
+AND3B1 AND3B1
+AND3 AND3
+Board_lib/Keyboard/schematic Keyboard
+Board_lib/count_10/schematic count_10
+AND4B3 AND4B3
+Board_lib/Clocks/schematic Clocks
+VCC VCC
+AND2B1 AND2B1
+OBUF OBUF
+MU0_lib/MU0_ALU/schematic MU0_ALU
+OR4 OR4
+Board_lib/Seven_segments/schematic Seven_segments
+IBUF IBUF
+OR2 OR2
+AND4B2 AND4B2
+MU0_lib/decoder_3_8/schematic decoder_3_8
+MU0_lib/MU0_conditions/schematic MU0_conditions
+AND2 AND2
+FDC FDC
+Board_lib/count_4/schematic count_4
+Board_lib/depp/schematic depp
+Board_lib/Board_led/schematic Board_led
+COMP12111_lib/fulladder/schematic fulladder
+IOPAD IOPAD
+MU0_lib/mux_3_1/schematic mux_3_1
+Board_lib/Traffic_lights/schematic Traffic_lights
+FDCE FDCE
+GND GND
+Board_lib/BoardV2/schematic BoardV2
+COMP12111_lib/adder_4bit/schematic adder_4bit
+Board_lib/Board_SW1/schematic Board_SW1
+$endmodel
+$net
+$endnet
+$param
+$endparam

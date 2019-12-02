@@ -1,0 +1,39 @@
+// Library - MU0_lib, Cell - MU0, View - schematic
+// LAST TIME SAVED: Jul 18 11:53:35 2018
+// NETLIST TIME: Nov 19 13:32:07 2019
+`timescale 1ns / 10ps 
+
+module MU0 ( Addr, Dout, Halted, Rd, Wr, cc, fetch, regC, Clk, Din,
+     Reset, srcC );
+
+output  Halted, Rd, Wr, fetch;
+
+input  Clk, Reset;
+
+output [11:0]  Addr;
+output [1:0]  cc;
+output [15:0]  Dout;
+output [15:0]  regC;
+
+input [15:0]  Din;
+input [1:0]  srcC;
+
+// Buses in the design
+
+wire  [15:0]  flags;
+
+wire  [0:15]  net028;
+
+wire  [0:1]  net34;
+
+wire  [0:3]  net35;
+
+wire  [0:15]  net027;
+
+
+specify 
+    specparam CDS_LIBNAME  = "MU0_lib";
+    specparam CDS_CELLNAME = "MU0";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+

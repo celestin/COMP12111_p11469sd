@@ -1,0 +1,32 @@
+// Library - MU0_lib, Cell - MU0_ALU, View - schematic
+// LAST TIME SAVED: Nov 19 13:07:01 2019
+// NETLIST TIME: Nov 19 13:43:03 2019
+`timescale 1ns / 10ps 
+
+module MU0_ALU ( Q, M, X, Y );
+
+
+
+output [15:0]  Q;
+
+input [15:0]  Y;
+input [15:0]  X;
+input [1:0]  M;
+
+// Buses in the design
+
+wire  [0:15]  net6;
+
+wire  [0:15]  net15;
+
+wire  [0:15]  net9;
+
+wire  [0:15]  net18;
+
+
+specify 
+    specparam CDS_LIBNAME  = "MU0_lib";
+    specparam CDS_CELLNAME = "MU0_ALU";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+

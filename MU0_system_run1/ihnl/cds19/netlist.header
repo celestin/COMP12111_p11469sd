@@ -1,0 +1,27 @@
+// Library - Board_lib, Cell - depp, View - schematic
+// LAST TIME SAVED: Jul 18 12:22:35 2018
+// NETLIST TIME: Nov 25 16:00:57 2019
+`timescale 1ns / 10ps 
+
+module depp ( DEPP_ASTB, DEPP_DSTB, DEPP_WRITE, data_from_ucontroller,
+     DEPP_WAIT, data_to_ucontroller );
+
+output  DEPP_ASTB, DEPP_DSTB, DEPP_WRITE;
+
+input  DEPP_WAIT;
+
+output [7:0]  data_from_ucontroller;
+
+input [7:0]  data_to_ucontroller;
+
+// Buses in the design
+
+wire  [7:0]  dbus;
+
+
+specify 
+    specparam CDS_LIBNAME  = "Board_lib";
+    specparam CDS_CELLNAME = "depp";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+

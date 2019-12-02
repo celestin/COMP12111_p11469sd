@@ -1,0 +1,14 @@
+MU0 I58 ( Addr[11:0], Dout[15:0], Halted, net032, Wr, {Z, N}, Fetch,
+     net030[0:15], Clk, Din[15:0], Reset, mem_addr[1:0]);
+GND  I27 ( .G(net01));
+GND  I26 ( .G(net06));
+GND  I31[1:0] ( .G(mem_addr[1:0]));
+memory_mu0 I21 ( Clk, Addr[11:0], Dout[15:0], Din[15:0], Wr,
+     net028[0:11], net027[0:15], net029[0:15], net06, net025[0:5],
+     net024[0:7], net011, net010, net050[0:5], net049[0:3],
+     net048[0:3], net047[0:3], net046[0:3], net045[0:3], net044[0:3],
+     net019[0:3], net023[0:7], net022[0:7], net021[0:7], net020[0:7],
+     net01, net01, net01, net01, net016, net017[0:15], net015, net014,
+     net013);
+
+endmodule

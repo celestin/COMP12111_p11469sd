@@ -1,0 +1,19 @@
+// Verilog HDL and netlist files of
+// "MU0_lib mux_2to1_16bit functional"
+
+// HDL models
+
+// HDL file for MU0_lib, mux_2to1_16bit, functional.
+/home/p11469sd/Cadence/COMP12111/MU0_lib/mux_2to1_16bit/functional/verilog.v
+
+
+
+// End HDL models
+
+// Netlisted models
+
+// netlist file - MU0_lib, mux_2to1_16bit, functional.
+ihnl/cds0/netlist
+
+
+// End HDL models

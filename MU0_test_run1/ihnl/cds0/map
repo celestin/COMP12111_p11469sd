@@ -1,0 +1,8 @@
+( ( defbus
+( "sel" 1 0  "sel" 1 0  )
+ )
+( net
+( "sel<0>" "sel[0]" )
+( "sel<1>" "sel[1]" )
+ )
+ )

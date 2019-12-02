@@ -1,0 +1,7 @@
+AND3B1  I2 ( .O(net10), .I2(B), .I1(sel[0]), .I0(sel[1]));
+AND3B1  I1 ( .O(net11), .I2(C), .I1(sel[1]), .I0(sel[0]));
+AND3B2  I3 ( .O(net12), .I2(A), .I1(sel[1]), .I0(sel[0]));
+AND3  I0 ( .O(net13), .I2(sel[1]), .I1(sel[0]), .I0(C));
+OR4  I4 ( .O(Q), .I3(net12), .I2(net10), .I1(net11), .I0(net13));
+
+endmodule

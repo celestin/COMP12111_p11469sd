@@ -1,0 +1,27 @@
+// Library - MU0_lib, Cell - mux_3_1, View - schematic
+// LAST TIME SAVED: Jul 18 11:56:44 2018
+// NETLIST TIME: Nov 25 16:00:57 2019
+`timescale 1ns / 10ps 
+
+module mux_3_1 ( Q, A, B, C, sel );
+
+output  Q;
+
+input  A, B, C;
+
+input [1:0]  sel;
+
+
+specify 
+    specparam CDS_LIBNAME  = "MU0_lib";
+    specparam CDS_CELLNAME = "mux_3_1";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+AND3B1  I2 ( .O(net10), .I2(B), .I1(sel[0]), .I0(sel[1]));
+AND3B1  I1 ( .O(net11), .I2(C), .I1(sel[1]), .I0(sel[0]));
+AND3B2  I3 ( .O(net12), .I2(A), .I1(sel[1]), .I0(sel[0]));
+AND3  I0 ( .O(net13), .I2(sel[1]), .I1(sel[0]), .I0(C));
+OR4  I4 ( .O(Q), .I3(net12), .I2(net10), .I1(net11), .I0(net13));
+
+endmodule

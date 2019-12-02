@@ -1,0 +1,7 @@
+INV  I10 ( .O(net13), .I(D0));
+AND3  I6 ( .I2(D1), .I0(CE), .I1(D0), .O(TC));
+FDCE  I8 ( .C(Clk), .CE(CE), .CLR(Clr), .Q(D1), .D(net10));
+FDCE  I9 ( .C(Clk), .CE(CE), .CLR(Clr), .Q(D0), .D(net13));
+XOR2  I4 ( .I0(D1), .I1(D0), .O(net10));
+
+endmodule

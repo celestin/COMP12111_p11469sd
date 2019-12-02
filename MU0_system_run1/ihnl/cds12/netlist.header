@@ -1,0 +1,16 @@
+// Library - Board_lib, Cell - Board_SW1, View - schematic
+// LAST TIME SAVED: Jul 18 12:21:05 2018
+// NETLIST TIME: Nov 25 16:00:57 2019
+`timescale 1ns / 10ps 
+
+module Board_SW1 ( Board_Switch1 );
+
+output  Board_Switch1;
+
+
+specify 
+    specparam CDS_LIBNAME  = "Board_lib";
+    specparam CDS_CELLNAME = "Board_SW1";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+

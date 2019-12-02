@@ -1,0 +1,74 @@
+// Library - MU0_lib, Cell - MU0_system, View - schematic
+// LAST TIME SAVED: Jul 18 12:17:37 2018
+// NETLIST TIME: Nov 25 16:00:58 2019
+`timescale 1ns / 10ps 
+
+module MU0_system (  );
+
+// Buses in the design
+
+wire  [15:0]  breakpoint_adr;
+
+wire  [3:0]  s6_leds;
+
+wire  [15:0]  mem_din;
+
+wire  [0:7]  net036;
+
+wire  [7:0]  bargraph;
+
+wire  [7:0]  key_row4;
+
+wire  [15:0]  mem_dout;
+
+wire  [0:7]  net033;
+
+wire  [0:7]  net034;
+
+wire  [0:7]  net035;
+
+wire  [15:0]  proc_din;
+
+wire  [0:3]  net048;
+
+wire  [0:3]  net046;
+
+wire  [0:3]  net049;
+
+wire  [0:15]  net028;
+
+wire  [0:3]  net045;
+
+wire  [0:3]  net047;
+
+wire  [11:0]  mem_addr;
+
+wire  [7:0]  key_row2;
+
+wire  [0:7]  net025;
+
+wire  [7:0]  key_row1;
+
+wire  [0:7]  net030;
+
+wire  [0:5]  net050;
+
+wire  [3:0]  proc_cc;
+
+wire  [0:3]  net044;
+
+wire  [11:0]  proc_addr;
+
+wire  [5:0]  traffic_lights;
+
+wire  [0:15]  net027;
+
+wire  [7:0]  key_row3;
+
+
+specify 
+    specparam CDS_LIBNAME  = "MU0_lib";
+    specparam CDS_CELLNAME = "MU0_system";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+

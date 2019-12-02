@@ -1,0 +1,23 @@
+CADENCE IHNL11140
+$model
+XOR2 XOR2
+COMP12111_lib/adder_16bit/schematic adder_16bit
+BUF BUF
+MU0_lib/MU0_datapath/schematic MU0_datapath
+NOR4 NOR4
+INV INV
+AND2B1 AND2B1
+MU0_lib/MU0_ALU/schematic MU0_ALU
+OR4 OR4
+OR2 OR2
+MU0_lib/MU0_conditions/schematic MU0_conditions
+AND2 AND2
+COMP12111_lib/fulladder/schematic fulladder
+FDCE FDCE
+GND GND
+COMP12111_lib/adder_4bit/schematic adder_4bit
+$endmodel
+$net
+$endnet
+$param
+$endparam

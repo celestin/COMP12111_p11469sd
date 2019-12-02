@@ -1,0 +1,8 @@
+CADENCE IHNL11140
+$model
+MU0_lib/mux_2to1_16bit/functional mux_2to1_16bit
+$endmodel
+$net
+$endnet
+$param
+$endparam
