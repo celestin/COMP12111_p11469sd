@@ -1,0 +1,376 @@
+KMD
+00000000:       ; 
+00000000:       ; ; Written by Sam da Costa
+00000000:       ; ;
+00000000:       ; ; allows user to enter a 2 digit number
+00000000:       ; ; This is displayed on the 7 seg display and displayed in binary on the bar graph
+00000000:       ; ; The traffic lights then flash
+00000000:       ; ; You can reset then with the clear button
+00000000:       ; startPro ;jump point for the program
+00000000:       ; 
+00000000:       ; 
+00000000:       ; 
+00000000:       ; ;initialise displays
+00000000: 00E8  ;         LDA enable2
+00000001: 1FFB  ;         STA &FFB
+00000002: 00CF  ;         LDA zero
+00000003: 1FF5  ;         STA disp1
+00000004: 1FF6  ;         STA disp2
+00000005: 1FFE  ;         STA bar
+00000006: 10E5  ;         STA actual
+00000007: 10E6  ;         STA temp
+00000008: 4009  ;         JMP next0;get first key
+00000009:       ; next0
+00000009: 0FF2  ;         LDA keyrow4 ;load keyrow4
+0000000A: 30E3  ;         SUB key8520 ;check if 0
+0000000B: 600F  ;         JNE next1
+0000000C: 00CF  ;         LDA zero
+0000000D: 1FF5  ;         STA disp1
+0000000E: 4045  ;         JMP loop
+0000000F: 0FF1  ; next1   LDA keyrow3 ;load keyrow3
+00000010: 30E4  ;         SUB key741 ;check if 1
+00000011: 6015  ;         JNE next2
+00000012: 00D0  ;         LDA one
+00000013: 1FF5  ;         STA disp1
+00000014: 4045  ;         JMP loop
+00000015: 0FF1  ; next2   LDA keyrow3 ;load keyrow3
+00000016: 30E3  ;         SUB key8520 ;check if 2
+00000017: 601B  ;         JNE next3
+00000018: 00D1  ;         LDA two
+00000019: 1FF5  ;         STA disp1
+0000001A: 4045  ;         JMP loop
+0000001B: 0FF1  ; next3   LDA keyrow3 ;load keyrow3
+0000001C: 30E2  ;         SUB key963 ;check if 3
+0000001D: 6021  ;         JNE next4
+0000001E: 00D2  ;         LDA three
+0000001F: 1FF5  ;         STA disp1
+00000020: 4045  ;         JMP loop
+00000021: 0FF0  ; next4   LDA keyrow2 ;load keyrow3
+00000022: 30E4  ;         SUB key741 ;check if 4
+00000023: 6027  ;         JNE next5
+00000024: 00D3  ;         LDA four
+00000025: 1FF5  ;         STA disp1
+00000026: 4045  ;         JMP loop
+00000027: 0FF0  ; next5   LDA keyrow2 ;load keyrow3
+00000028: 30E3  ;         SUB key8520 ;check if 5
+00000029: 602D  ;         JNE next6
+0000002A: 00D4  ;         LDA five
+0000002B: 1FF5  ;         STA disp1
+0000002C: 4045  ;         JMP loop
+0000002D: 0FF0  ; next6   LDA keyrow2 ;load keyrow3
+0000002E: 30E2  ;         SUB key963 ;check if 6
+0000002F: 6033  ;         JNE next7
+00000030: 00D5  ;         LDA six
+00000031: 1FF5  ;         STA disp1
+00000032: 4045  ;         JMP loop
+00000033: 0FEF  ; next7   LDA keyrow1 ;load keyrow3
+00000034: 30E4  ;         SUB key741 ;check if 7
+00000035: 6039  ;         JNE next8
+00000036: 00D6  ;         LDA seven
+00000037: 1FF5  ;         STA disp1
+00000038: 4045  ;         JMP loop
+00000039: 0FEF  ; next8   LDA keyrow1 ;load keyrow3
+0000003A: 30E3  ;         SUB key8520 ;check if 8
+0000003B: 603F  ;         JNE next9
+0000003C: 00D7  ;         LDA eight
+0000003D: 1FF5  ;         STA disp1
+0000003E: 4045  ;         JMP loop
+0000003F: 0FEF  ; next9   LDA keyrow1 ;load keyrow3
+00000040: 30E2  ;         SUB key963 ;check if 9
+00000041: 6009  ;         JNE next0
+00000042: 00D8  ;         LDA nine
+00000043: 1FF5  ;         STA disp1
+00000044: 4045  ;         JMP loop
+00000045:       ; 
+00000045:       ; loop;adjust displays
+00000045: 0FF5  ; LDA disp1
+00000046: 1FF6  ; STA disp2
+00000047: 00CF  ; LDA zero
+00000048: 1FF5  ; STA disp1
+00000049:       ; ;wait so that the value is not registered twice
+00000049:       ; ;wait script
+00000049:       ; tLoop
+00000049: 00DF  ;         LDA junk
+0000004A: 20D0  ;         ADD one
+0000004B: 10DF  ;         STA junk
+0000004C: 00DE  ;         LDA ldTimer
+0000004D: 20D0  ;         ADD one
+0000004E: 10DE  ;         STA ldTimer
+0000004F: 00DE  ;         LDA ldTimer
+00000050: 30E0  ;         SUB tEnd
+00000051: 6049  ;         JNE tLoop       
+00000052: 4053  ;         JMP timerEnd
+00000053:       ; 
+00000053:       ; timerEnd
+00000053:       ; 
+00000053:       ; 
+00000053:       ; 
+00000053:       ; ;get next key
+00000053:       ; next0A
+00000053: 0FF2  ;         LDA keyrow4 ;load keyrow4
+00000054: 30E3  ;         SUB key8520 ;check if 0
+00000055: 6059  ;         JNE next1A
+00000056: 00CF  ;         LDA zero
+00000057: 1FF5  ;         STA disp1
+00000058: 408F  ;         JMP loopA
+00000059: 0FF1  ; next1A  LDA keyrow3 ;load keyrow3
+0000005A: 30E4  ;         SUB key741 ;check if 1
+0000005B: 605F  ;         JNE next2A
+0000005C: 00D0  ;         LDA one
+0000005D: 1FF5  ;         STA disp1
+0000005E: 408F  ;         JMP loopA
+0000005F: 0FF1  ; next2A  LDA keyrow3 ;load keyrow3
+00000060: 30E3  ;         SUB key8520 ;check if 2
+00000061: 6065  ;         JNE next3A
+00000062: 00D1  ;         LDA two
+00000063: 1FF5  ;         STA disp1
+00000064: 408F  ;         JMP loopA
+00000065: 0FF1  ; next3A  LDA keyrow3 ;load keyrow3
+00000066: 30E2  ;         SUB key963 ;check if 3
+00000067: 606B  ;         JNE next4A
+00000068: 00D2  ;         LDA three
+00000069: 1FF5  ;         STA disp1
+0000006A: 408F  ;         JMP loopA
+0000006B: 0FF0  ; next4A  LDA keyrow2 ;load keyrow3
+0000006C: 30E4  ;         SUB key741 ;check if 4
+0000006D: 6071  ;         JNE next5A
+0000006E: 00D3  ;         LDA four
+0000006F: 1FF5  ;         STA disp1
+00000070: 408F  ;         JMP loopA
+00000071: 0FF0  ; next5A  LDA keyrow2 ;load keyrow3
+00000072: 30E3  ;         SUB key8520 ;check if 5
+00000073: 6077  ;         JNE next6A
+00000074: 00D4  ;         LDA five
+00000075: 1FF5  ;         STA disp1
+00000076: 408F  ;         JMP loopA
+00000077: 0FF0  ; next6A  LDA keyrow2 ;load keyrow3
+00000078: 30E2  ;         SUB key963 ;check if 6
+00000079: 607D  ;         JNE next7A
+0000007A: 00D5  ;         LDA six
+0000007B: 1FF5  ;         STA disp1
+0000007C: 408F  ;         JMP loopA
+0000007D: 0FEF  ; next7A  LDA keyrow1 ;load keyrow3
+0000007E: 30E4  ;         SUB key741 ;check if 7
+0000007F: 6083  ;         JNE next8A
+00000080: 00D6  ;         LDA seven
+00000081: 1FF5  ;         STA disp1
+00000082: 408F  ;         JMP loopA
+00000083: 0FEF  ; next8A  LDA keyrow1 ;load keyrow3
+00000084: 30E3  ;         SUB key8520 ;check if 8
+00000085: 6089  ;         JNE next9A
+00000086: 00D7  ;         LDA eight
+00000087: 1FF5  ;         STA disp1
+00000088: 408F  ;         JMP loopA
+00000089: 0FEF  ; next9A  LDA keyrow1 ;load keyrow3
+0000008A: 30E2  ;         SUB key963 ;check if 9
+0000008B: 6053  ;         JNE next0A
+0000008C: 00D8  ;         LDA nine
+0000008D: 1FF5  ;         STA disp1
+0000008E: 408F  ;         JMP loopA
+0000008F:       ; ;concatenate numbers
+0000008F:       ; loopA
+0000008F:       ; 
+0000008F: 0FF6  ;         LDA disp2
+00000090: 10E6  ;         STA temp
+00000091: 6093  ;         JNE flagA
+00000092: 409B  ;         JMP allEq
+00000093: 30D0  ; flagA   SUB one
+00000094: 10E6  ;         STA temp
+00000095: 00E5  ;         LDA actual
+00000096: 20D9  ;         ADD ten
+00000097: 10E5  ;         STA actual
+00000098: 00E6  ;         LDA temp
+00000099: 6093  ;         JNE flagA
+0000009A: 409B  ;         JMP allEq
+0000009B:       ; 
+0000009B:       ; 
+0000009B:       ; allEq
+0000009B: 1FFE  ;         STA bar ;output to bar
+0000009C: 00E5  ;         LDA actual
+0000009D: 2FF5  ;         ADD disp1
+0000009E: 10E5  ;         STA actual
+0000009F:       ; 
+0000009F: 00CF  ;         LDA zero
+000000A0: 1FFE  ;         STA bar
+000000A1: 00E5  ;         LDA actual
+000000A2: 1FFE  ;         STA bar
+000000A3:       ; ; timerlogic
+000000A3:       ; timerRestart
+000000A3:       ; 
+000000A3:       ; 
+000000A3: 0FEF  ;         LDA keyrow1
+000000A4: 30E1  ;         SUB keyC
+000000A5: 60A7  ;         JNE timer
+000000A6: 4000  ;         JMP startPro
+000000A7: 00CF  ; timer   LDA zero
+000000A8: 10DE  ;         STA ldTimer
+000000A9: 10DF  ;         STA junk
+000000AA:       ; 
+000000AA:       ; ;flash traffic lights between states
+000000AA:       ; tLoop2
+000000AA:       ; 
+000000AA:       ;         
+000000AA: 00DF  ;         LDA junk
+000000AB: 20D0  ;         ADD one
+000000AC: 10DF  ;         STA junk
+000000AD: 00DE  ;         LDA ldTimer
+000000AE: 20D0  ;         ADD one
+000000AF: 10DE  ;         STA ldTimer
+000000B0: 00DE  ;         LDA ldTimer
+000000B1: 30E0  ;         SUB tEnd
+000000B2: 60AA  ;         JNE tLoop2      
+000000B3: 40B4  ;         JMP timerEnd2
+000000B4:       ; 
+000000B4:       ; timerEnd2
+000000B4: 00DA  ;         LDA state
+000000B5: 60BB  ;         JNE flagB
+000000B6: 20D0  ;         ADD one
+000000B7: 10DA  ;         STA state
+000000B8: 00DB  ;         LDA traff1
+000000B9: 1FFF  ;         STA traffic
+000000BA: 40A3  ;         JMP timerRestart
+000000BB: 30D0  ; flagB   SUB one
+000000BC: 60C2  ;         JNE flagC
+000000BD: 20D1  ;         ADD two
+000000BE: 10DA  ;         STA state
+000000BF: 00DC  ;         LDA traff2
+000000C0: 1FFF  ;         STA traffic
+000000C1: 40A3  ;         JMP timerRestart
+000000C2: 30D0  ; flagC   SUB one
+000000C3: 60C9  ;         JNE flagD
+000000C4: 20D2  ;         ADD three
+000000C5: 10DA  ;         STA state
+000000C6: 00DD  ;         LDA traff3
+000000C7: 1FFF  ;         STA traffic
+000000C8: 40A3  ;         JMP timerRestart
+000000C9: 00DC  ; flagD   LDA traff2
+000000CA: 1FFF  ;         STA traffic
+000000CB: 00CF  ;         LDA zero
+000000CC: 10DA  ;         STA state
+000000CD: 40A3  ;         JMP timerRestart
+000000CE:       ; 
+000000CE:       ; 
+000000CE: 7000  ;         STP
+000000CF:       ; 
+000000CF:       ; 
+000000CF:       ; 
+000000CF: 0000  ; zero    DEFW &0
+000000D0: 0001  ; one     DEFW &1
+000000D1: 0002  ; two     DEFW &2
+000000D2: 0003  ; three   DEFW &3
+000000D3: 0004  ; four    DEFW &4
+000000D4: 0005  ; five    DEFW &5
+000000D5: 0006  ; six     DEFW &6
+000000D6: 0007  ; seven   DEFW &7
+000000D7: 0008  ; eight   DEFW &8
+000000D8: 0009  ; nine    DEFW &9
+000000D9: 000A  ; ten     DEFW &000A
+000000DA:       ; 
+000000DA: 0000  ; state   DEFW &0
+000000DB: 0021  ; traff1  DEFW &0021
+000000DC: 0012  ; traff2  DEFW &0012
+000000DD: 000C  ; traff3  DEFW &000C
+000000DE: 0000  ; ldTimer DEFW &0
+000000DF: 0000  ; junk    DEFW &0
+000000E0: 0000  ; tEnd    DEFW &10000
+000000E1:       ; 
+000000E1: 0004  ; keyC    DEFW &0004
+000000E2: 0008  ; key963  DEFW &0008
+000000E3: 0010  ; key8520 DEFW &0010
+000000E4: 0020  ; key741  DEFW &0020
+000000E5: 0000  ; actual  DEFW &0000
+000000E6: 0000  ; temp    DEFW &0000
+000000E7:       ; disp1   EQU &FF5
+000000E7:       ; disp2   EQU &FF6
+000000E7:       ; disp3   EQU &FF7
+000000E7:       ; disp4   EQU &FF8
+000000E7:       ; disp5   EQU &FF9
+000000E7:       ; disp6   EQU &FFA
+000000E7:       ; dispE   EQU &FFB
+000000E7:       ; bar     EQU &FFE
+000000E7:       ; keyrow1 EQU &FEF
+000000E7:       ; keyrow2 EQU &FF0
+000000E7:       ; keyrow3 EQU &FF1
+000000E7:       ; keyrow4 EQU &FF2
+000000E7:       ; traffic EQU &FFF
+000000E7: 003F  ; enable  DEFW &003F
+000000E8: 0003  ; enable2 DEFW &0003
+000000E9: 0FF6  ; digit1  DEFW &FF6
+000000EA:       ; 
+000000EA:       ; 
+
+Symbol Table: Labels
+: startPro                          00000000  Local --
+: next0                             00000009  Local --
+: next1                             0000000F  Local --
+: next2                             00000015  Local --
+: next3                             0000001B  Local --
+: next4                             00000021  Local --
+: next5                             00000027  Local --
+: next6                             0000002D  Local --
+: next7                             00000033  Local --
+: next8                             00000039  Local --
+: next9                             0000003F  Local --
+: loop                              00000045  Local --
+: tLoop                             00000049  Local --
+: timerEnd                          00000053  Local --
+: next0A                            00000053  Local --
+: next1A                            00000059  Local --
+: next2A                            0000005F  Local --
+: next3A                            00000065  Local --
+: next4A                            0000006B  Local --
+: next5A                            00000071  Local --
+: next6A                            00000077  Local --
+: next7A                            0000007D  Local --
+: next8A                            00000083  Local --
+: next9A                            00000089  Local --
+: loopA                             0000008F  Local --
+: flagA                             00000093  Local --
+: allEq                             0000009B  Local --
+: timerRestart                      000000A3  Local --
+: timer                             000000A7  Local --
+: tLoop2                            000000AA  Local --
+: timerEnd2                         000000B4  Local --
+: flagB                             000000BB  Local --
+: flagC                             000000C2  Local --
+: flagD                             000000C9  Local --
+: zero                              000000CF  Local --
+: one                               000000D0  Local --
+: two                               000000D1  Local --
+: three                             000000D2  Local --
+: four                              000000D3  Local --
+: five                              000000D4  Local --
+: six                               000000D5  Local --
+: seven                             000000D6  Local --
+: eight                             000000D7  Local --
+: nine                              000000D8  Local --
+: ten                               000000D9  Local --
+: state                             000000DA  Local --
+: traff1                            000000DB  Local --
+: traff2                            000000DC  Local --
+: traff3                            000000DD  Local --
+: ldTimer                           000000DE  Local --
+: junk                              000000DF  Local --
+: tEnd                              000000E0  Local --
+: keyC                              000000E1  Local --
+: key963                            000000E2  Local --
+: key8520                           000000E3  Local --
+: key741                            000000E4  Local --
+: actual                            000000E5  Local --
+: temp                              000000E6  Local --
+: disp1                             00000FF5  Value
+: disp2                             00000FF6  Value
+: disp3                             00000FF7  Value
+: disp4                             00000FF8  Value
+: disp5                             00000FF9  Value
+: disp6                             00000FFA  Value
+: dispE                             00000FFB  Value
+: bar                               00000FFE  Value
+: keyrow1                           00000FEF  Value
+: keyrow2                           00000FF0  Value
+: keyrow3                           00000FF1  Value
+: keyrow4                           00000FF2  Value
+: traffic                           00000FFF  Value
+: enable                            000000E7  Local --
+: enable2                           000000E8  Local --
+: digit1                            000000E9  Local --
